@@ -71,6 +71,13 @@
                                 <rect key="frame" x="20" y="151" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HI I'M A LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C1-EM-Qnl">
+                                <rect key="frame" x="126" y="518" width="194" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pi3-3y-nlB"/>
@@ -84,6 +91,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="0bg-Bg-P3k" id="Wqz-0l-aFR"/>
+                        <outlet property="nameLabek" destination="1C1-EM-Qnl" id="SIA-7g-eZx"/>
                         <outlet property="saveButton" destination="s5I-dK-mNC" id="4fo-ub-cIZ"/>
                         <outlet property="searchBar" destination="hMA-Oo-xKS" id="56Z-Zn-MLf"/>
                     </connections>

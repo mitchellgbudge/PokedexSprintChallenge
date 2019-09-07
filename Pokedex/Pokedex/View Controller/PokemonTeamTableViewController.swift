@@ -31,6 +31,8 @@ class PokemonTeamTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath)
         let pokemon = pokemonController.pokemonTeam[indexPath.row]
+        guard let pokemonImageData = try? Data(contentsOf: pokemon.sprites.frontDefault) else { fatalError() }
+        cell.imageView?.image = UIImage(data: pokemonImageData)
         cell.textLabel?.text = pokemon.name.capitalized
         return cell
     }

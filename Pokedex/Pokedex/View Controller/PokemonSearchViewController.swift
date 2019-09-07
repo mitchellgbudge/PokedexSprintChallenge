@@ -13,6 +13,7 @@ class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var nameLabek: UILabel!
     
     var pokemonController: PokemonController?
     var pokemon: Pokemon? {
@@ -24,6 +25,7 @@ class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        hideViews()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -38,6 +40,7 @@ class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
     
     func hideViews() {
         saveButton.isEnabled = false
+        nameLabek.isHidden = true
     }
     
     func updateViews() {
@@ -47,6 +50,8 @@ class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
         title = pokemon.name.capitalized + " " + "ID: \(pokemon.id)"
         guard let pokemonImageData = try? Data(contentsOf: pokemon.sprites.frontDefault) else { return }
         imageView.image = UIImage(data: pokemonImageData)
+        nameLabek.isHidden = false
+        nameLabek.text = pokemon.name.capitalized
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
