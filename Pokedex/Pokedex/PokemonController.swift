@@ -13,7 +13,7 @@ class PokemonController {
     let baseURL = URL(string: "https://pokeapi.co/api/v2/pokemon/")!
     
     func getPokemon(searchTerm: String, completion: @escaping (Result<Pokemon, Error>) -> Void) {
-        let requestURL = baseURL.appendingPathComponent(searchTerm)
+        let requestURL = baseURL.appendingPathComponent(searchTerm.lowercased())
         
         URLSession.shared.dataTask(with: requestURL) { (jsonData, _, error) in
             if let error = error {
