@@ -19,12 +19,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonCell" id="AP7-It-YH5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonCell" textLabel="Mog-22-BhD" style="IBUITableViewCellStyleDefault" id="AP7-It-YH5">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AP7-It-YH5" id="hdw-I1-VRA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mog-22-BhD">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +45,7 @@
                     <navigationItem key="navigationItem" id="Xjo-uA-K10">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="bHX-jy-7c1">
                             <connections>
-                                <segue destination="LXX-FI-pkp" kind="show" identifier="AddPokemon" id="qeR-ai-kyO"/>
+                                <segue destination="LXX-FI-pkp" kind="show" identifier="SearchPokemon" id="qeR-ai-kyO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,9 +75,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pi3-3y-nlB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search for a Pokemon" id="Zw1-rD-1Yc"/>
+                    <navigationItem key="navigationItem" title="Search for a Pokemon" id="Zw1-rD-1Yc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="s5I-dK-mNC">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="LXX-FI-pkp" id="0S5-OO-ac8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="0bg-Bg-P3k" id="Wqz-0l-aFR"/>
+                        <outlet property="saveButton" destination="s5I-dK-mNC" id="4fo-ub-cIZ"/>
                         <outlet property="searchBar" destination="hMA-Oo-xKS" id="56Z-Zn-MLf"/>
                     </connections>
                 </viewController>

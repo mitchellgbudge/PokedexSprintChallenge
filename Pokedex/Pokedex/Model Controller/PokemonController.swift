@@ -10,6 +10,8 @@ import Foundation
 
 class PokemonController {
     
+    var pokemonTeam: [Pokemon] = []
+    
     let baseURL = URL(string: "https://pokeapi.co/api/v2/pokemon/")!
     
     func getPokemon(searchTerm: String, completion: @escaping (Result<Pokemon, Error>) -> Void) {
@@ -37,6 +39,10 @@ class PokemonController {
                 completion(.failure(error))
             }
         }.resume()
+    }
+    
+    func addPokemon(pokemon: Pokemon) {
+        pokemonTeam.append(pokemon)
     }
     
 }
