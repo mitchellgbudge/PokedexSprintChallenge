@@ -14,6 +14,7 @@
 		3D97CC58232430EA00739215 /* PokemonTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CC57232430EA00739215 /* PokemonTeamTableViewController.swift */; };
 		3D97CC5A2324310500739215 /* PokemonSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CC592324310500739215 /* PokemonSearchViewController.swift */; };
 		3D97CC5D2324317D00739215 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CC5C2324317D00739215 /* Pokemon.swift */; };
+		3D97CC60232432C200739215 /* PokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CC5F232432C200739215 /* PokemonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3D97CC57232430EA00739215 /* PokemonTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTeamTableViewController.swift; sourceTree = "<group>"; };
 		3D97CC592324310500739215 /* PokemonSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSearchViewController.swift; sourceTree = "<group>"; };
 		3D97CC5C2324317D00739215 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		3D97CC5F232432C200739215 /* PokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3D97CC5B2324315C00739215 /* View Controller */,
 				3D97CC552324290500739215 /* Storyboards */,
 				3D97CC562324291200739215 /* Resources */,
+				3D97CC5F232432C200739215 /* PokemonController.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				3D97CC5D2324317D00739215 /* Pokemon.swift in Sources */,
 				3D97CC5A2324310500739215 /* PokemonSearchViewController.swift in Sources */,
 				3D97CC44232427F500739215 /* AppDelegate.swift in Sources */,
+				3D97CC60232432C200739215 /* PokemonController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
