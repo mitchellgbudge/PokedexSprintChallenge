@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Pokemon Team Table View Controller-->
         <scene sceneID="nXz-Rk-o8x">
             <objects>
-                <tableViewController id="tzc-0y-sb3" sceneMemberID="viewController">
+                <tableViewController id="tzc-0y-sb3" customClass="PokemonTeamTableViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R5s-ck-hYk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AP7-It-YH5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonCell" id="AP7-It-YH5">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AP7-It-YH5" id="hdw-I1-VRA">
@@ -48,7 +48,7 @@
         <!--Search for a Pokemon-->
         <scene sceneID="Ohe-iA-UkH">
             <objects>
-                <viewController id="LXX-FI-pkp" sceneMemberID="viewController">
+                <viewController id="LXX-FI-pkp" customClass="PokemonSearchViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ShK-PM-gIe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
