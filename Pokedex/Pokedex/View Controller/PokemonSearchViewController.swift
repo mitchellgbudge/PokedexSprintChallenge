@@ -11,6 +11,7 @@ import UIKit
 class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var imageView: UIImageView!
     
     let pokemonController = PokemonController()
     var pokemon: Pokemon? {
@@ -38,6 +39,8 @@ class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
         guard isViewLoaded else { return }
         guard let pokemon = pokemon else { return }
         title = pokemon.name.capitalized + " " + "ID: \(pokemon.id)"
+        guard let pokemonImageData = try? Data(contentsOf: pokemon.sprites.frontDefault) else { return }
+        imageView.image = UIImage(data: pokemonImageData)
     }
     
 }

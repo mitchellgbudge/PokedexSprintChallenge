@@ -27,7 +27,9 @@ class PokemonController {
                 return
             }
             do {
-                let pokemon = try JSONDecoder().decode(Pokemon.self, from: pokemonData)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let pokemon = try decoder.decode(Pokemon.self, from: pokemonData)
                 print(pokemon)
                 completion(.success(pokemon))
             } catch {
